@@ -30,7 +30,7 @@ atexit.register(lambda: scheduler.shutdown())
 def scrape():
 	statusError =True
 	while statusError ==True:
-		r = requests.get('https://access.alchemyapi.com/calls/data/GetNews?apikey=519c0474356c6d4f16dfeffaae8a1e652aa03131&start=1474761600&end=1475452799&outputMode=json&count=5&q.enriched.url.title=A[trump^elections]&return=enriched.url.url,enriched.url.title&dedup=1')
+		r = requests.get('https://access.alchemyapi.com/calls/data/GetNews?apikey=519c0474356c6d4f16dfeffaae8a1e652aa03131&start=1474761600&end=1475452799&outputMode=json&count=5&q.enriched.url.title=A[elections]&return=enriched.url.url,enriched.url.title&dedup=1')
 		parsed_json = json.loads(r.text)
 		if parsed_json['status'] =='OK':
 			statusError==False	
