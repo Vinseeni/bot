@@ -67,16 +67,16 @@ def webhook():
                                 send_message(sender_id, rows[0][3])
                             elif "hillary" in message_text.lower():
                                 send_message(sender_id, "Here's some news on your request")
-                                send_message(sender_id, "http://www.latimes.com/nation/politics/trailguide/la-na-live-updates-trailguide-hillary-clinton-pounces-on-donald-1475266902-htmlstory.html")
+                                send_message(sender_id, "news")
                             elif "undecided" in message_text.lower():
                                 send_message(sender_id, "Here's some news")
-                                send_message(sender_id, "http://www.dailynews.co.tz/index.php/features/54059-who-is-to-blame-if-trump-triumphs-in-us-elections")
+                                send_message(sender_id, "news")
                             elif "more" in message_text.lower():
                                 counter = int(rows[0][0])
                                 send_message(sender_id, rows[counter][3])
                                 articlewriter.writerow()
                             else :
-                                send_message(sender_id, "Hey there! I've got election news just for you!")
+                                send_message(sender_id, "Hey there! I've got news just for you!")
 
                     if messaging_event.get("delivery"):  # delivery confirmation
                         pass
