@@ -12,7 +12,7 @@ newsList = []
 # def findArticles():
 #     statusError =True
 #     while statusError ==True:
-#         r = requests.get('https://access.alchemyapi.com/calls/data/GetNews?apikey=519c0474356c6d4f16dfeffaae8a1e652aa03131&start=1474761600&end=1475452799&outputMode=json&count=3&q.enriched.url.title=A[trump^elections]&return=enriched.url.url,enriched.url.title&dedup=1')
+#         r = requests.get('https://access.alchemyapi.com/calls/data/GetNews?apikey=519c0474356c6d4f16dfeffaae8a1e652aa03131&start=1474761600&end=1475452799&outputMode=json&count=3&q.enriched.url.title=A[elections]&return=enriched.url.url,enriched.url.title&dedup=1')
 #         parsed_json = json.loads(r.text)
 #         if parsed_json['status'] =='OK':
 #             statusError==False  
@@ -62,13 +62,13 @@ def webhook():
                             articlereader = csv.reader(csvfile)
                             articlewriter = csv.writer(csvfile)
                             rows = list(articlereader)
-                            if "trump" in message_text.lower():
+                            if "so" in message_text.lower():
                                 send_message(sender_id, "okay")
                                 send_message(sender_id, rows[0][3])
-                            elif "hillary" in message_text.lower():
+                            elif "so and so" in message_text.lower():
                                 send_message(sender_id, "Here's some news on your request")
                                 send_message(sender_id, "news")
-                            elif "undecided" in message_text.lower():
+                            elif "unsure" in message_text.lower():
                                 send_message(sender_id, "Here's some news")
                                 send_message(sender_id, "news")
                             elif "more" in message_text.lower():
