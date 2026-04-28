@@ -1,1 +1,1 @@
-# electobot
+# bot
